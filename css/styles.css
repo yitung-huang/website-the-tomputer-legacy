@@ -127,6 +127,12 @@ footer {
   background: #222222;
   color: #BBB;
   padding: 1.2em;
-  font-size: 1.5em;
+  font-size: 1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 900px){
+  footer {
+    font-size: 1.15rem;
+  }
 }
