@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
 }
 
 h1,
@@ -9,6 +10,10 @@ h3,
 h4,
 p {
   margin: 0;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 img {
@@ -20,7 +25,8 @@ header {
   padding: 1em 0;
 }
 
-.header-container{
+.header-container,
+.section-container {
   margin: 0 auto;
   width: 80%;
 }
@@ -81,6 +87,40 @@ header {
 .icon__link:hover {
   transform: scale(1.2);
   transition: transform 250ms ease-in-out;
+}
+
+/* General section styles */
+section {
+  padding: 2em 3em;
+}
+
+.section-container,
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section-content,
+p + .section-image {
+  margin-top: 1em;
+}
+
+.section-image {
+  /* margin: 8em auto 2em; */
+  width: 85%;
+  max-width: 400px;
+}
+
+
+/* Section - Responsive */
+.section-responsive {
+  color: #2c4569;
 }
 
 footer {
