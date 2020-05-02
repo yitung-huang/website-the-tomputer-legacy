@@ -202,6 +202,11 @@ section {
   color: white;
 }
 
+/* Section - Previous works */
+.section-previous-works {
+  color: #c84569;
+}
+
 footer {
   background: #222222;
   color: #BBB;
