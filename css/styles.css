@@ -61,7 +61,6 @@ header {
 .header-container,
 .section-container {
   margin: 0 auto;
-  width: 80%;
 }
 
 .header-title {
@@ -88,7 +87,12 @@ header {
   font-size: 1.5rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+  .header-container,
+  .section-container {
+    width: 80%;
+  }
+
   .header-title {
     font-size: 3rem;
   }
