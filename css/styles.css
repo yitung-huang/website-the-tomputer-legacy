@@ -91,6 +91,7 @@ header {
   .header-container,
   .section-container {
     width: 80%;
+    max-width: 900px;
   }
 
   .header-title {
@@ -145,6 +146,15 @@ section {
   align-items: center;
 }
 
+.section-content{
+  width: 100%;
+}
+
+.section-content__text,
+.section-content__text > * {
+  width: inherit;
+}
+
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -164,11 +174,6 @@ section {
   section {
     padding: 2.5em 3em;
   }
-
-  .section-content {
-     width: 80%;
-     max-width: 900px;
-   }
 
    .section-title {
      margin-bottom: 0.5em;
