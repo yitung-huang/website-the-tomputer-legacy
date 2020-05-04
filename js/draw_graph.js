@@ -59,6 +59,6 @@ function drawBarGraph( title, div_id, data ){
   container.appendChild( graph );
 }
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', function(event) {
   drawBarGraph("Most commonly used browsers - March 2020", "common-browser-graph", COMMON_BROWSER_DATA);
 });
