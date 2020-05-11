@@ -53,7 +53,6 @@ a.link__inline:active {
   }
 }
 
-
 header {
   background: linear-gradient( #e66465, #2c4569 );
   padding: 4em 0;
@@ -283,6 +282,16 @@ section {
   .work-example__phone {
     max-width: 400px !important;
   }
+}
+
+/* Section - Contact me */
+.section-contact-me {
+  background: linear-gradient(#e66465, #ddaa55);
+  color: white;
+}
+
+.section-contact-me a {
+  color: #2c4569;
 }
 
 footer {
