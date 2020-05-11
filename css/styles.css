@@ -53,6 +53,7 @@ a.link__inline:active {
   }
 }
 
+
 header {
   background: linear-gradient( #e66465, #2c4569 );
   padding: 4em 0;
@@ -272,6 +273,16 @@ section {
 
 .link__previous-work {
   margin: 0 0.5em;
+}
+
+.work-example__phone {
+  max-width: 300px !important;
+}
+
+@media screen and (min-width: 900px) {
+  .work-example__phone {
+    max-width: 400px !important;
+  }
 }
 
 footer {
