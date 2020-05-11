@@ -71,6 +71,32 @@ header {
   color: white;
 }
 
+.speech-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speech-bubble__arrow {
+  display: flex;
+  flex-direction: row;
+  width: 1.75em;
+  height: 1.65em;
+}
+
+.speech-bubble__arrow > * {
+  width: 50%;
+  height: inherit;
+}
+
+.speech-bubble__arrow .speech-bubble__arrow__left {
+  background-image: linear-gradient(-60deg, white 50%, transparent 50%);
+}
+
+.speech-bubble__arrow .speech-bubble__arrow__right {
+  background-image: linear-gradient(60deg, white 50%, transparent 50%);
+}
+
 .profile-div {
   background: white;
   border-radius: 8px;
