@@ -55,7 +55,7 @@ a.link__inline:active {
 
 header {
   background: linear-gradient( #e66465, #2c4569 );
-  padding: 1em 0;
+  padding: 4em 0;
 }
 
 .header-container,
@@ -64,7 +64,7 @@ header {
 }
 
 .header-title {
-  margin: 0.5em auto;
+  margin: 0 auto;
 
   font-size: 2.5rem;
   text-align: center;
@@ -132,6 +132,19 @@ header {
   transform: scale(1.2);
   transition: transform 250ms ease-in-out;
 }
+
+.link__img {
+  text-decoration: none;
+}
+
+.link__img:focus {
+  outline: none;
+}
+
+.link__img:focus .icon__link {
+  border: orange 2px solid;
+}
+
 
 /* General section styles */
 section {
