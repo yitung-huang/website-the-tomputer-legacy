@@ -270,6 +270,10 @@ section {
   color: #c84569;
 }
 
+.link__previous-work {
+  margin: 0 0.5em;
+}
+
 footer {
   background: #222222;
   color: #BBB;
