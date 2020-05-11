@@ -207,7 +207,7 @@ section {
 .section-image {
   width: auto;
   height: auto;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 @media screen and (min-width: 900px){
@@ -215,9 +215,14 @@ section {
     padding: 2.5em 3em;
   }
 
-   .section-title {
-     margin-bottom: 0.5em;
-   }
+  .section-title {
+    margin-bottom: 0.5em;
+  }
+
+  .section-image {
+    max-width: 400px;
+  }
+
 }
 
 
