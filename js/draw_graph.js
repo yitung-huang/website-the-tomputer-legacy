@@ -1,64 +1,69 @@
 const COMMON_BROWSER_DATA = [
-  { label: "Chrome",    value: 59.3, colour: "#FFAABB" },
-  { label: "Safari",    value: 12.3, colour: "#FFBBAA" },
-  { label: "IE & Edge", value: 9.1, colour: "#FFCCAA" },
-  { label: "Firefox",   value: 4.5, colour: "#FFDD99" },
-  { label: "Opera",     value: 3.0, colour: "#FFEE99" }
+    { label: 'Chrome', value: 59.3, colour: '#FFAABB' },
+    { label: 'Safari', value: 12.3, colour: '#FFBBAA' },
+    { label: 'IE & Edge', value: 9.1, colour: '#FFCCAA' },
+    { label: 'Firefox', value: 4.5, colour: '#FFDD99' },
+    { label: 'Opera', value: 3.0, colour: '#FFEE99' }
 ];
 
-function drawBarGraph( title, div_id, data ){
-  let max = -Infinity;
+function drawBarGraph(title, div_id, data) {
+    let max = -Infinity;
 
-  let graph = document.createElement( "TABLE" );
+    let graph = document.createElement('TABLE');
 
-  let table_rows = [];
+    let table_rows = [];
 
-  for (let i = 0; i < data.length; i++){
-    // Record the maximum value to set the scale
-    if (data[i].value > max){
-      max = data[i].value;
+    for (let i = 0; i < data.length; i++) {
+        // Record the maximum value to set the scale
+        if (data[i].value > max) {
+            max = data[i].value;
+        }
+
+        let table_row = document.createElement('TR');
+        let label = document.createElement('TD');
+        let bar_container = document.createElement('TD');
+        let bar = document.createElement('DIV');
+        let value = document.createElement('DIV');
+
+        label.innerHTML = data[i].label;
+        label.classList.add('graph__label');
+
+        bar_container.classList.add('graph__bar-container');
+        bar.classList.add('graph__bar');
+        bar.style.background = data[i].colour;
+        value.innerHTML = data[i].value + '%';
+        value.classList.add('graph__value');
+
+        bar_container.appendChild(bar);
+        bar_container.appendChild(value);
+
+        table_row.appendChild(label);
+        table_row.appendChild(bar_container);
+
+        table_rows.push(table_row);
     }
 
-    let table_row = document.createElement( "TR" );
-    let label = document.createElement( "TD" );
-    let bar_container = document.createElement( "TD" );
-    let bar = document.createElement( "DIV" );
-    let value = document.createElement( "DIV" );
+    const scale = 60;
 
-    label.innerHTML = data[i].label;
-    label.classList.add("graph__label");
+    for (let i = 0; i < data.length; i++) {
+        table_rows[i].children[1].children[0].style.width =
+            (data[i].value / scale) * 100 + '%';
+        graph.appendChild(table_rows[i]);
+    }
 
-    bar_container.classList.add("graph__bar-container");
-    bar.classList.add("graph__bar");
-    bar.style.background = data[i].colour;
-    value.innerHTML = data[i].value + "%";
-    value.classList.add("graph__value");
+    let graph_title = document.createElement('DIV');
+    graph_title.innerHTML = title;
+    graph_title.classList.add('graph__title');
 
-    bar_container.appendChild( bar );
-    bar_container.appendChild( value );
-
-    table_row.appendChild( label );
-    table_row.appendChild( bar_container );
-
-    table_rows.push( table_row );
-  }
-
-  const scale = 60;
-
-  for (let i = 0; i < data.length; i++){
-    table_rows[i].children[1].children[0].style.width = (data[i].value/scale) * 100 + "%";
-    graph.appendChild( table_rows[i] );
-  }
-
-  let graph_title = document.createElement( "DIV" );
-  graph_title.innerHTML = title;
-  graph_title.classList.add("graph__title");
-
-  let container = document.getElementById( div_id );
-  container.appendChild( graph_title );
-  container.appendChild( graph );
+    let container = document.getElementById(div_id);
+    container.appendChild(graph_title);
+    container.appendChild(graph);
 }
 
-window.addEventListener('load', function(event) {
-  drawBarGraph("Most commonly used browsers - March 2020", "common-browser-graph", COMMON_BROWSER_DATA);
+window.addEventListener('load', function (event) {
+    drawBarGraph(
+        'Most commonly used browsers - March 2020',
+        'common-browser-graph',
+        COMMON_BROWSER_DATA
+    );
 });

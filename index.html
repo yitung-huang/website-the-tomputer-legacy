@@ -1,100 +1,171 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>The Tomputer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>The Tomputer</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <meta property="og:title" content="The Tomputer" />
+        <meta
+            property="og:image"
+            content="http://www.thetomputer.com/images/compatibility_website_preview.png"
+        />
+        <meta property="og:image:width" content="647" />
+        <meta property="og:image:height" content="560" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:description"
+            content="The Tomputer is a passionate web developer based in Adelaide."
+        />
 
-    <meta property="og:title" content="The Tomputer" />
-    <meta property="og:image" content="http://www.thetomputer.com/images/compatibility_website_preview.png" />
-    <meta property="og:image:width" content="647" />
-    <meta property="og:image:height" content="560" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="The Tomputer is a passionate web developer based in Adelaide." />
+        <link rel="icon" type="image/png" href="./images/favicon.svg" />
 
-    <link rel="icon" type="image/png" href="./images/favicon.svg">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/graph.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+        />
 
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <link rel="stylesheet" href="./css/graph.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap">
+        <script type="text/javascript" src="./js/draw_graph.js"></script>
+    </head>
 
-    <script type="text/javascript" src="./js/draw_graph.js"></script>
-
-  </head>
-
-  <body>
-
-    <header>
-      <div class="header-container">
-        <h1 class="header-title">Hello, I'm Thomas</h1>
-        <div class="links-div">
-          <a class="link__img" target="_blank" href="https://www.linkedin.com/in/yi-tung-huang-5a5676188/">
-            <img class="icon__link" src="./images/social_media_icons/linkedin.svg"/>
-          </a>
-          <a class="link__img" target="_blank" href="https://github.com/yitung-huang">
-            <img class="icon__link" src="./images/social_media_icons/github.svg"/>
-          </a>
-        </div>
-        <img class="img__cover" src="./images/cover.svg"/>
-        <div class="speech-bubble">
-          <div class="speech-bubble__arrow">
-            <div class="speech-bubble__arrow__left"></div>
-            <div class="speech-bubble__arrow__right"></div>
-          </div>
-        <div class="profile-div">
-          <p>I'm a passionate web developer based in Adelaide.</p>
-        </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="section-responsive">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="section-content__text">
-            <h2 class="section-title">The websites I make fit on all screen sizes</h2>
-            <p>Not everyone has a computer these days. The devices that they use can come in varying sizes, too. However, that's not a problem - the layout might look different, but I can easily make your website fit on all screen sizes.</p>
-          </div>
-          <img class="section-image" src="./images/compatibility.png"/>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-compatibility">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="section-content__text">
-            <h2 class="section-title">The websites I make work on the most popular browsers</h2>
-            <p>According to <a class="link__external link__inline" href="https://www.w3counter.com/globalstats.php?year=2020&month=3">W3Counter</a>, Google Chrome, Safari, Internet Explorer & Edge, and Modzilla Firefox are the top 4 most popular web browsers as of March 2020. My work is tested on the most recent versions of these browsers on both Windows and MacOS.</p>
-            <div id="common-browser-graph" class="graph-container"></div>
-            <div class="browser-icons__div">
-              <img class="browser-icon" src="./images/browser_icons/chrome.png"/>
-              <img class="browser-icon" src="./images/browser_icons/safari.png"/>
-              <img class="browser-icon" src="./images/browser_icons/edge.png"/>
-              <img class="browser-icon" src="./images/browser_icons/firefox.png"/>
+    <body>
+        <header>
+            <div class="header-container">
+                <h1 class="header-title">Hello, I'm Thomas</h1>
+                <div class="links-div">
+                    <a
+                        class="link__img"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/yi-tung-huang-5a5676188/"
+                    >
+                        <img
+                            class="icon__link"
+                            src="./images/social_media_icons/linkedin.svg"
+                        />
+                    </a>
+                    <a
+                        class="link__img"
+                        target="_blank"
+                        href="https://github.com/yitung-huang"
+                    >
+                        <img
+                            class="icon__link"
+                            src="./images/social_media_icons/github.svg"
+                        />
+                    </a>
+                </div>
+                <img class="img__cover" src="./images/cover.svg" />
+                <div class="speech-bubble">
+                    <div class="speech-bubble__arrow">
+                        <div class="speech-bubble__arrow__left"></div>
+                        <div class="speech-bubble__arrow__right"></div>
+                    </div>
+                    <div class="profile-div">
+                        <p>I'm a passionate web developer based in Adelaide.</p>
+                    </div>
+                </div>
             </div>
-            <div class="highlight-box">
-              <p class="highlight-box__title">Is your favourite browser not on my testing list?</p>
-              <p class="highlight-box__text">That's okay. Simply let me know, and I'll do my best to make it work for you and your website viewers!</p>
+        </header>
+
+        <section class="section-responsive">
+            <div class="section-container">
+                <div class="section-content">
+                    <div class="section-content__text">
+                        <h2 class="section-title">
+                            The websites I make fit on all screen sizes
+                        </h2>
+                        <p>
+                            Not everyone has a computer these days. The devices
+                            that they use can come in varying sizes, too.
+                            However, that's not a problem - the layout might
+                            look different, but I can easily make your website
+                            fit on all screen sizes.
+                        </p>
+                    </div>
+                    <img
+                        class="section-image"
+                        src="./images/compatibility.png"
+                    />
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="section-previous-works">
-      <div class="section-container">
-        <h2 class="section-title">Check out the website I designed!</h2>
-        <a class="link__previous-work" target="_blank" href="http://www.tftsolutions.com.au">
-          <img class="section-image work-example__phone" src="./images/work_example_phone.png"/>
-        </a>
-      </div>
-    </section>
+        <section class="section-compatibility">
+            <div class="section-container">
+                <div class="section-content">
+                    <div class="section-content__text">
+                        <h2 class="section-title">
+                            The websites I make work on the most popular
+                            browsers
+                        </h2>
+                        <p>
+                            According to
+                            <a
+                                class="link__external link__inline"
+                                href="https://www.w3counter.com/globalstats.php?year=2020&month=3"
+                                >W3Counter</a
+                            >, Google Chrome, Safari, Internet Explorer & Edge,
+                            and Modzilla Firefox are the top 4 most popular web
+                            browsers as of March 2020. My work is tested on the
+                            most recent versions of these browsers on both
+                            Windows and MacOS.
+                        </p>
+                        <div
+                            id="common-browser-graph"
+                            class="graph-container"
+                        ></div>
+                        <div class="browser-icons__div">
+                            <img
+                                class="browser-icon"
+                                src="./images/browser_icons/chrome.png"
+                            />
+                            <img
+                                class="browser-icon"
+                                src="./images/browser_icons/safari.png"
+                            />
+                            <img
+                                class="browser-icon"
+                                src="./images/browser_icons/edge.png"
+                            />
+                            <img
+                                class="browser-icon"
+                                src="./images/browser_icons/firefox.png"
+                            />
+                        </div>
+                        <div class="highlight-box">
+                            <p class="highlight-box__title">
+                                Is your favourite browser not on my testing
+                                list?
+                            </p>
+                            <p class="highlight-box__text">
+                                That's okay. Simply let me know, and I'll do my
+                                best to make it work for you and your website
+                                viewers!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-      The Tomputer 2020
-    </footer>
+        <section class="section-previous-works">
+            <div class="section-container">
+                <h2 class="section-title">Check out the website I designed!</h2>
+                <a
+                    class="link__previous-work"
+                    target="_blank"
+                    href="http://www.tftsolutions.com.au"
+                >
+                    <img
+                        class="section-image work-example__phone"
+                        src="./images/work_example_phone.png"
+                    />
+                </a>
+            </div>
+        </section>
 
-  </body>
+        <footer>The Tomputer 2021</footer>
+    </body>
 </html>

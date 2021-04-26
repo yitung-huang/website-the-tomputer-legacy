@@ -1,51 +1,51 @@
 .graph-container {
-  width: 100%;
+    width: 100%;
 }
 
 @media screen and (min-width: 900px) {
-  width: 85%;
+    width: 85%;
 }
 
 .graph-container table {
-  width:100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .graph-container td {
-  padding: 0.5em 0;
+    padding: 0.5em 0;
 }
 
 .graph__title {
-  width: 100%;
-  text-align:center;
-  font-size: 1.5rem;
-  text-decoration: underline;
-  margin: 1em 0 0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin: 1em 0 0.5em;
 }
 
 .graph__label {
-  width: 15%;
-  text-align: right;
-  padding-right: 0.5em !important;
-  border-right: 1px solid black;
+    width: 15%;
+    text-align: right;
+    padding-right: 0.5em !important;
+    border-right: 1px solid black;
 }
 
 .graph__bar-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .graph__bar {
-  border: 1px solid black;
-  border-left: none;
-  height: 40px;
+    border: 1px solid black;
+    border-left: none;
+    height: 40px;
 }
 
 .graph__value {
-  background: black;
-  text-align: center;
-  padding: 0.25em 0.5em;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+    background: black;
+    text-align: center;
+    padding: 0.25em 0.5em;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
