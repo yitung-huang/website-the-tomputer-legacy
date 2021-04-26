@@ -1,9 +1,9 @@
 const COMMON_BROWSER_DATA = [
-    { label: 'Chrome', value: 59.3, colour: '#FFAABB' },
-    { label: 'Safari', value: 12.3, colour: '#FFBBAA' },
-    { label: 'IE & Edge', value: 9.1, colour: '#FFCCAA' },
-    { label: 'Firefox', value: 4.5, colour: '#FFDD99' },
-    { label: 'Opera', value: 3.0, colour: '#FFEE99' }
+    { label: 'Chrome', value: 65.2, colour: '#FFAABB' },
+    { label: 'Safari', value: 17.5, colour: '#FFBBAA' },
+    { label: 'IE & Edge', value: 5.6, colour: '#FFCCAA' },
+    { label: 'Firefox', value: 4.4, colour: '#FFDD99' },
+    { label: 'Opera', value: 1.6, colour: '#FFEE99' }
 ];
 
 function drawBarGraph(title, div_id, data) {
@@ -62,7 +62,7 @@ function drawBarGraph(title, div_id, data) {
 
 window.addEventListener('load', function (event) {
     drawBarGraph(
-        'Most commonly used browsers - March 2020',
+        'Most commonly used browsers - March 2021',
         'common-browser-graph',
         COMMON_BROWSER_DATA
     );
